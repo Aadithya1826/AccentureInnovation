@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crime Scene Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Crime Scene Generator</h1>
+        <form id="crime-form">
+            <label for="crime_scene_data">Enter Crime Scene Data:</label><br>
+            <textarea id="crime_scene_data" name="crime_scene_data" rows="5" cols="40" placeholder="E.g. Location, Time, Evidence, etc."></textarea><br><br>
+            
+            <label for="chapter_title">Enter Chapter Title:</label><br>
+            <input type="text" id="chapter_title" name="chapter_title" placeholder="E.g. A Shadow in the Alley"><br><br>
+            
+            <button type="submit">Generate Scene & Chapter</button>
+        </form>
+        <hr>
+        <div id="result">
+            <h2>Generated Scene Description</h2>
+            <p id="scene-description"></p>
+            
+            <h2>Generated Novel Chapter</h2>
+            <p id="novel-chapter"></p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
